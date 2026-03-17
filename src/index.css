@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&family=Montserrat:wght@300;400;500;600;700&family=Cinzel:wght@400;700&display=swap');
+
+/* ═══════════════════════════════════════════════════
+   ITALIA  —  SISTEMA DI DESIGN
+   ═══════════════════════════════════════════════════ */
+
+:root {
+  /* Palette based on Italian artistic masters & landscapes */
+  --a-verde:   #0a5c3a;   /* Bosco umbro scuro */
+  --b-verde:   #1c9e58;   /* Verde Italia bandiera */
+  --a-rosso:   #7a0e14;   /* Pompeii red */
+  --b-rosso:   #ce2b37;   /* Rosso bandiera */
+  --oro:       #b8972a;   /* Oro mosaico Ravenna */
+  --oro-l:     #f2d06b;   /* Oro chiaro luce */
+  --avorio:    #faf3e2;   /* Marmo avorio */
+  --sabbia:    #d9c4a0;   /* Spiaggia siciliana */
+  --blu-notte: #04101f;   /* Mar Tirreno di notte */
+  --blu-med:   #0d2b4a;
+  --terra:     #5a220a;
+  --cinabro:   #c8361a;
+
+  /* Specifiche per città */
+  --c-roma:    #c0341f;   /* Creta rossa fori */
+  --c-firenze: #b07d18;   /* Oro degli Uffizi */
+  --c-venezia: #1558a0;   /* Blu lagunare */
+  --c-milano:  #6340a8;   /* Viola dei Visconti */
+  --c-amalfi:  #107850;   /* Verde limoni IGP */
+  --c-matera:  #907840;   /* Calcarenite sassi */
+  --c-sicilia: #bd3010;   /* Rosso Etna */
+
+  --bg:        #080c14;
+  --text:      #f0e8d8;
+  --muted:     #a89878;
+
+  --font-d:    'Cinzel', serif;           /* Display: titoli grandi */
+  --font-h:    'Cormorant Garamond', serif;/* Heading: elegante letterario */
+  --font-b:    'Montserrat', sans-serif;  /* Body: leggibile, moderno */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+p { font-family: var(--font-b); line-height: 1.75; color: var(--muted); }
+
+/* ─── Deep Mediterranean Night Background ─── */
+body {
+  font-family: var(--font-b);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Atmospheric background layers */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: -3;
+  background:
+    /* Tramonto in alto a destra */
+    radial-gradient(ellipse 55% 35% at 85% 5%,  rgba(192, 52, 31, 0.20) 0%, transparent 55%),
+    /* Glow terracotta top-left */
+    radial-gradient(ellipse 50% 30% at 10% 8%,  rgba(184, 149, 42, 0.14) 0%, transparent 50%),
+    /* Verde profondo Umbria center */
+    radial-gradient(ellipse 80% 50% at 50% 55%, rgba(10, 92, 58, 0.08)  0%, transparent 60%),
+    /* Fondo notturno blu mediterraneo */
+    linear-gradient(175deg, #0a0f1e 0%, #06090f 35%, #080c14 65%, #050709 100%);
+}
+
+/* Nebbia animata */
+body::after {
+  content: '';
+  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 25% at 30% 40%, rgba(184,149,42,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 25% at 70% 70%, rgba(192,52,31,0.07)  0%, transparent 55%);
+  animation: nebbia 22s ease-in-out infinite alternate;
+}
+@keyframes nebbia {
+  from { opacity: 0.5; transform: scale(1); }
+  to   { opacity: 1;   transform: scale(1.08) translateY(-1%); }
+}
+
+/* Noise texture */
+.noise {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='500' height='500' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 300px;
+}
+
+/* Tricolore top bar */
+.tricolore-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--b-verde) 0% 33.3%,
+    #f5f5f5       33.3% 66.6%,
+    var(--b-rosso) 66.6% 100%);
+}
+
+/* Scrollbar elegante */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: #040608; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--oro), var(--cinabro));
+  border-radius: 4px;
+}
+
+/* Text utilities */
+.text-gold {
+  background: linear-gradient(135deg, var(--oro-l), var(--oro));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.text-flame {
+  background: linear-gradient(135deg, var(--oro-l), var(--cinabro), var(--a-rosso));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.text-verde {
+  background: linear-gradient(135deg, var(--b-verde), var(--a-verde));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+/* Float animations */
+@keyframes float-a {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  40%      { transform: translateY(-22px) rotate(5deg); }
+  70%      { transform: translateY(14px) rotate(-4deg); }
+}
+@keyframes float-b {
+  0%,100% { transform: translateY(0) rotate(0deg) scale(1); }
+  50%      { transform: translateY(-30px) rotate(-6deg) scale(1.04); }
+}
+@keyframes fog-run {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes glow-pulse {
+  0%,100% { opacity: 0.25; }
+  50%      { opacity: 0.55; }
+}
+
+.app-main { position: relative; z-index: 1; }

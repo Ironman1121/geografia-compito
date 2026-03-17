@@ -1,0 +1,6 @@
+/* Minimal App CSS as most styles are in index.css or inline/modules */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
