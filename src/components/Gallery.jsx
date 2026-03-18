@@ -4,32 +4,32 @@ import { motion, AnimatePresence } from 'framer-motion';
 /* ── Data: multiple photos per city ── */
 const photos = [
   // Roma
-  { id: 1,  city: 'Roma',    label: 'Colosseo',             src: 'https://picsum.photos/seed/roma-col/800/600' },
-  { id: 2,  city: 'Roma',    label: 'Piazza Navona',        src: 'https://picsum.photos/seed/roma-navona/800/600' },
-  { id: 3,  city: 'Roma',    label: 'Vaticano',             src: 'https://picsum.photos/seed/roma-vat/800/600' },
+  { id: 1,  city: 'Roma',    label: 'Colosseo',             src: './images/g1.jpg' },
+  { id: 2,  city: 'Roma',    label: 'Piazza Navona',        src: './images/g2.jpg' },
+  { id: 3,  city: 'Roma',    label: 'Vaticano',             src: './images/g3.jpg' },
   // Firenze
-  { id: 4,  city: 'Firenze', label: 'Duomo di Firenze',     src: 'https://picsum.photos/seed/fir-duomo/800/600' },
-  { id: 5,  city: 'Firenze', label: 'Ponte Vecchio',        src: 'https://picsum.photos/seed/fir-ponte/800/600' },
-  { id: 6,  city: 'Firenze', label: 'Piazzale',             src: 'https://picsum.photos/seed/fir-pia/800/600' },
+  { id: 4,  city: 'Firenze', label: 'Duomo di Firenze',     src: './images/g4.jpg' },
+  { id: 5,  city: 'Firenze', label: 'Ponte Vecchio',        src: './images/g5.jpg' },
+  { id: 6,  city: 'Firenze', label: 'Piazzale',             src: './images/g6.jpg' },
   // Venezia
-  { id: 7,  city: 'Venezia', label: 'Canal Grande',         src: 'https://picsum.photos/seed/ven-canal/800/600' },
-  { id: 8,  city: 'Venezia', label: 'Gondola',              src: 'https://picsum.photos/seed/ven-gon/800/600' },
-  { id: 9,  city: 'Venezia', label: 'San Marco',            src: 'https://picsum.photos/seed/ven-marco/800/600' },
+  { id: 7,  city: 'Venezia', label: 'Canal Grande',         src: './images/g7.jpg' },
+  { id: 8,  city: 'Venezia', label: 'Gondola',              src: './images/g8.jpg' },
+  { id: 9,  city: 'Venezia', label: 'San Marco',            src: './images/g9.jpg' },
   // Milano
-  { id: 10, city: 'Milano',  label: 'Duomo di Milano',      src: 'https://picsum.photos/seed/mil-duomo/800/600' },
-  { id: 11, city: 'Milano',  label: 'Galleria Vittorio',    src: 'https://picsum.photos/seed/mil-gal/800/600' },
-  { id: 12, city: 'Milano',  label: 'Navigli',              src: 'https://picsum.photos/seed/mil-nav/800/600' },
+  { id: 10, city: 'Milano',  label: 'Duomo di Milano',      src: './images/g10.jpg' },
+  { id: 11, city: 'Milano',  label: 'Galleria Vittorio',    src: './images/g11.jpg' },
+  { id: 12, city: 'Milano',  label: 'Navigli',              src: './images/g12.jpg' },
   // Amalfi
-  { id: 13, city: 'Amalfi',  label: 'Positano',             src: 'https://picsum.photos/seed/ama-pos/800/600' },
-  { id: 14, city: 'Amalfi',  label: 'Costiera',             src: 'https://picsum.photos/seed/ama-coast/800/600' },
-  { id: 15, city: 'Amalfi',  label: 'Ravello',              src: 'https://picsum.photos/seed/ama-rav/800/600' },
+  { id: 13, city: 'Amalfi',  label: 'Positano',             src: './images/g13.jpg' },
+  { id: 14, city: 'Amalfi',  label: 'Costiera',             src: './images/g14.jpg' },
+  { id: 15, city: 'Amalfi',  label: 'Ravello',              src: './images/g15.jpg' },
   // Matera
-  { id: 16, city: 'Matera',  label: 'I Sassi',              src: 'https://picsum.photos/seed/mat-sassi/800/600' },
-  { id: 17, city: 'Matera',  label: 'Città Vecchia',        src: 'https://picsum.photos/seed/mat-vecchia/800/600' },
+  { id: 16, city: 'Matera',  label: 'I Sassi',              src: './images/g16.jpg' },
+  { id: 17, city: 'Matera',  label: 'Città Vecchia',        src: './images/g17.jpg' },
   // Sicilia
-  { id: 18, city: 'Sicilia', label: 'Taormina',             src: 'https://picsum.photos/seed/sic-taor/800/600' },
-  { id: 19, city: 'Sicilia', label: 'Etna',                 src: 'https://picsum.photos/seed/sic-etna/800/600' },
-  { id: 20, city: 'Sicilia', label: 'Cefalù',               src: 'https://picsum.photos/seed/sic-cef/800/600' },
+  { id: 18, city: 'Sicilia', label: 'Taormina',             src: './images/g18.jpg' },
+  { id: 19, city: 'Sicilia', label: 'Etna',                 src: './images/g19.jpg' },
+  { id: 20, city: 'Sicilia', label: 'Cefalù',               src: './images/g20.jpg' },
 ];
 
 const filters = [
@@ -67,7 +67,7 @@ const Lightbox = ({ photo, onClose }) => (
       style={{ position: 'relative', maxWidth: '800px', width: '100%' }}
     >
       <img
-        src={photo.src.replace('/800/600', '/1200/800')}
+        src={photo.src}
         alt={photo.label}
         style={{ width: '100%', borderRadius: '16px', display: 'block', boxShadow: '0 40px 80px rgba(0,0,0,0.7)' }}
       />
