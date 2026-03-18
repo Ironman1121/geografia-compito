@@ -15,7 +15,7 @@ const itineraryData = [
     tagline: "Due millenni di storia sotto i tuoi piedi",
     description:
       "Roma non si visita, si vive. Fondata — secondo la leggenda — da Romolo nel 753 a.C., custodisce oltre 2.000 anni di arte, potere e religione in ogni vicolo del suo centro storico.",
-    image: "/images/roma.jpg",
+    image: "./images/roma.jpg",
     morningActivities: [
       "Ore 8:00 — Visita guidata al Colosseo (evita le code con biglietto prioritario € 16)",
       "Ore 10:00 — Fori Imperiali e Campidoglio: percorso tra via Sacra e l'arco di Tito",
@@ -47,7 +47,7 @@ const itineraryData = [
     tagline: "Dove nasce la bellezza che il mondo conosce come Arte",
     description:
       "Firenze è la città di Dante, di Leonardo e di Michelangelo. Capoluogo della Toscana, è circondata da colline ricoperte di vigneti e olivi. Il centro storico è Patrimonio UNESCO dal 1982.",
-    image: "/images/firenze.jpg",
+    image: "./images/firenze.jpg",
     morningActivities: [
       "Ore 8:30 — Galleria degli Uffizi: ammira La Nascita di Venere di Botticelli (€ 20, prenotare online)",
       "Ore 11:00 — Tour del Corridoio Vasariano (su prenotazione, visita esclusiva)",
@@ -79,7 +79,7 @@ const itineraryData = [
     tagline: "Una città sull'acqua che sfida le leggi della natura da mille anni",
     description:
       "Venezia è costruita su 118 isole collegate da 439 ponti, senza una sola automobile. Fu la potenza marittima e commerciale più potente del Medioevo. Il suo Carnevale è famoso nel mondo intero.",
-    image: "/images/venezia.jpg",
+    image: "./images/venezia.jpg",
     morningActivities: [
       "Ore 7:30 — Alzati presto e goditi San Marco PRIMA dei turisti: la Basilica è spettacolare nel silenzio",
       "Ore 9:00 — Palazzo Ducale: le prigioni, la Sala del Maggior Consiglio, il Ponte dei Sospiri",
@@ -111,7 +111,7 @@ const itineraryData = [
     tagline: "Dove il design italiano incontra la finanza globale",
     description:
       "Milano è la capitale economica e della moda italiana. Fondata dai Celti come Mediolanum, fu capitale dell'Impero Romano d'Occidente. Oggi ospita la Borsa italiana, il distretto della moda e le sedi di Ferrari, Armani e Prada.",
-    image: "/images/milano.jpg",
+    image: "./images/milano.jpg",
     morningActivities: [
       "Ore 8:00 — Duomo: 135 guglie, 3.400 statue, ascesa alle terrazze con vista sulle Alpi (€ 5)",
       "Ore 10:30 — Pinacoteca di Brera: Caravaggio, Raffaello e Tiepolo in una delle migliori gallerie d'Italia",
@@ -143,7 +143,7 @@ const itineraryData = [
     tagline: "Scogliere a picco sul mare, limoni giganti e un orizzonte infinito",
     description:
       "Dichiarata Patrimonio UNESCO nel 1997, la Costiera si estende per 50 km tra Positano e Salerno. I limoni di Amalfi (IGP) sono i più grandi d'Italia — grandi come pompelmi — e crescono sulle ripide terrazze scavate nella roccia.",
-    image: "/images/amalfi.jpg",
+    image: "./images/amalfi.jpg",
     morningActivities: [
       "Ore 7:00 — Sentiero degli Dei: trekking da Bomerano a Positano (4 ore, 1.443 m di quota, vista mozzafiato)",
       "Ore 10:00 — Positano: scendi le scalinate colorate fino alla spiaggia Grande, nuota nel Tirreno cristallino",
@@ -175,7 +175,7 @@ const itineraryData = [
     tagline: "Una delle città più antiche del mondo: abitate da 9.000 anni senza interruzione",
     description:
       "Matera è un'anomalia del mondo moderno: le sue case-grotta (Sassi) sono state abitate ininterrottamente dal Paleolitico. Dichiarata patrimonio UNESCO nel 1993, è stata Capitale Europea della Cultura 2019. Mel Gibson scelse Matera come location di Gerusalemme nel suo \"Passione di Cristo\".",
-    image: "/images/matera.jpg",
+    image: "./images/matera.jpg",
     morningActivities: [
       "Ore 8:00 — Sasso Caveoso al mattino: i vicoli sonnolenti e la luce radente svelano la trama di pietra calcarea",
       "Ore 9:30 — Tour guidato di 5 chiese rupestri: affreschi del XI sec. perfettamente conservati nel buio delle grotte",
@@ -207,7 +207,7 @@ const itineraryData = [
     tagline: "Tra il fuoco dell'Etna, il mare Jonio e le rovine greche del III sec. a.C.",
     description:
       "Fondata dai Greci nel 304 a.C., Taormina è soprannominata la \"Perla dello Ionio\". Il Teatro Antico domina il golfo di Naxos e ha l'Etna come fondale naturale. Goethe la definì \"un pezzetto di paradiso\".",
-    image: "/images/sicilia.jpg",
+    image: "./images/sicilia.jpg",
     morningActivities: [
       "Ore 8:00 — Teatro Antico di Taormina (III sec. a.C.): veduta sull'Etna fumante e sul Mar Jonio (€ 10)",
       "Ore 10:00 — Passeggiata sul Corso Umberto I: bar storici, ceramiche di Caltagirone, cannoli freschi",
